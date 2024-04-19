@@ -564,6 +564,10 @@ nav ul li:hover {
     .rates-box {
         grid-template-columns: repeat(3, 250px);
     }
+
+    .rates-info {
+        margin-right: 0;
+    }
 }
 
 @media (min-width:768px) {}
