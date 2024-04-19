@@ -409,7 +409,7 @@ nav ul li:hover {
 }
 
 .rates-info a {
-    margin-right: 70px;
+    /* margin-right: 70px; */
 }
 
 .price {
@@ -566,7 +566,7 @@ nav ul li:hover {
     }
 
     .rates-info a{
-        margin-right: 0;
+        transform: scale(0.8);
     }
 }
 
