@@ -491,8 +491,6 @@ nav ul li:hover{
 
 
 /* ==========================FOOOTER================================= */
-.container {}
-
 .footer-inner {
     display: flex;
     justify-content: space-between;
