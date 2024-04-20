@@ -138,8 +138,9 @@ nav ul li:hover {
 
 .idea-box {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    gap: 210px;
     margin-bottom: 120px;
 }
 
@@ -150,8 +151,12 @@ nav ul li:hover {
     justify-content: center;
 }
 
+.idea img {
+    width: 59%;
+}
+
 .idea p {
-    width: 470px;
+    max-width: 470px;
     text-align: center;
 }
 
@@ -406,10 +411,7 @@ nav ul li:hover {
 
 .rates-info {
     display: flex;
-}
-
-.rates-info a {
-    /* margin-right: 70px; */
+    gap: 50px;
 }
 
 .price {
@@ -560,18 +562,87 @@ nav ul li:hover {
 }
 
 /* =================================ADAPTIVE===================== */
-@media (min-width:992px) {
+@media (min-width: 1200px) {}
+
+@media (max-width:992px) {
     .rates-box {
         grid-template-columns: repeat(3, 250px);
     }
 
-    .rates-info a{
-        transform: scale(0.8);
+    .rates-info {
+        gap: 25px;
+    }
+
+    .rates-info a {
+        padding: 10px 5px;
+    }
+
+    .block-4 .first-ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .block-2, .block-3 {
+        display: none;
     }
 }
 
-@media (min-width:768px) {}
+@media (max-width:768px) {
+    nav ul {
+        gap: 30px;
+    }
 
-@media (min-width:480px) {}
+    .banner_inner a img {
+        width: 100%;
+    }
+
+    .rates-box {
+        grid-template-columns: repeat(3, 220px);
+    }
+
+    .footer-inner {
+        justify-content: space-around;
+    }
+
+}
+
+@media (max-width:480px) {
+    .header_inner {
+        flex-direction: column;
+        gap: 50px;
+    }
+    
+    .idea-box {
+        gap: 0;
+    }
+
+    .talk {
+        display: none;
+    }
+
+    .membership {
+        display: none;
+    }
+
+    .ep-box {
+        grid-template-columns: repeat(1, 2fr);
+    }
+
+    .rates-box {
+        grid-template-columns: repeat(2, 220px);
+    }
+
+
+    .article-title {
+        font-size: 22px;
+        margin-bottom: 0;
+    }
+    
+    .article-description {
+        font-size: 10px;
+    }
+}
+
+
 
 @media (min-width:320px) {}
