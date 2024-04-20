@@ -188,6 +188,9 @@ nav ul li:hover {
     background: rgba(237, 243, 247, 1);
 }
 
+.reviews .container {
+    overflow: hidden;
+}
 
 .reviews-container {
     display: flex;
