@@ -55,7 +55,6 @@ nav ul li:hover {
 
 /* ============================================== CAROUSEL ========================= */
 .carousel {
-    display: none;
     position: relative;
     height: 373px;
     overflow: hidden;
@@ -187,8 +186,6 @@ nav ul li:hover {
 /* =======================================================Reviews=================================== */
 .reviews {
     background: rgba(237, 243, 247, 1);
-    overflow: hidden;
-    display: none;
 }
 
 
