@@ -55,6 +55,7 @@ nav ul li:hover {
 
 /* ============================================== CAROUSEL ========================= */
 .carousel {
+    display: none;
     position: relative;
     height: 373px;
     overflow: hidden;
@@ -186,11 +187,10 @@ nav ul li:hover {
 /* =======================================================Reviews=================================== */
 .reviews {
     background: rgba(237, 243, 247, 1);
+    overflow: hidden;
+    display: none;
 }
 
-.reviews .container {
-    overflow: hidden;
-}
 
 .reviews-container {
     display: flex;
@@ -326,8 +326,7 @@ nav ul li:hover {
 }
 
 .ep-item img {
-    width: 166px;
-    height: auto;
+    max-width: 166px;
     border-radius: 12px;
 }
 
@@ -381,6 +380,7 @@ nav ul li:hover {
     width: 100%;
     border-radius: 8px;
     cursor: pointer;
+    padding: 60px 40px 30px 40px;
 }
 
 .first:hover {
@@ -398,7 +398,6 @@ nav ul li:hover {
     font-weight: 700;
     line-height: 51.31px;
     letter-spacing: -0.02em;
-    margin: 0 0 20px 40px;
 }
 
 .description-rates {
@@ -406,12 +405,13 @@ nav ul li:hover {
     font-weight: 500;
     line-height: 22.4px;
     max-width: 292px;
-    margin: 0 0 20px 40px;
 }
 
 .rates-info {
     display: flex;
     gap: 50px;
+    justify-content: center;
+    align-items: center;
 }
 
 .price {
@@ -562,8 +562,6 @@ nav ul li:hover {
 }
 
 /* =================================ADAPTIVE===================== */
-@media (min-width: 1200px) {}
-
 @media (max-width:992px) {
     .rates-box {
         grid-template-columns: repeat(3, 250px);
@@ -571,10 +569,6 @@ nav ul li:hover {
 
     .rates-info {
         gap: 25px;
-    }
-
-    .rates-info a {
-        padding: 10px 5px;
     }
 
     .block-4 .first-ul {
@@ -592,6 +586,11 @@ nav ul li:hover {
         gap: 30px;
     }
 
+    .header_inner {
+        flex-direction: column;
+        gap: 50px;
+    }
+
     .banner_inner a img {
         width: 100%;
     }
@@ -606,12 +605,15 @@ nav ul li:hover {
 
 }
 
-@media (max-width:480px) {
-    .header_inner {
-        flex-direction: column;
-        gap: 50px;
+@media (max-width: 720px) {
+    .ep-box {
+        grid-template-columns: repeat(1, 2fr);
     }
-    
+
+    .btn {
+        padding: 10px 20px;
+    }
+
     .idea-box {
         gap: 0;
     }
@@ -624,25 +626,71 @@ nav ul li:hover {
         display: none;
     }
 
-    .ep-box {
-        grid-template-columns: repeat(1, 2fr);
-    }
-
     .rates-box {
         grid-template-columns: repeat(2, 220px);
     }
-
 
     .article-title {
         font-size: 22px;
         margin-bottom: 0;
     }
-    
+
     .article-description {
         font-size: 10px;
     }
 }
 
+@media (max-width:320px) {
+    .wrapper {
+        overflow: hidden;
+    }
+    .title {
+        font-size: 70px;
+        line-height: normal;
+    }
 
+    .ep-description {
+        font-size: 10px;
+    }
 
-@media (min-width:320px) {}
+    .ep-info .name {
+        font-size: 19px;
+    }
+
+    .ep-box {
+        grid-template-columns: repeat(1, 304px);
+    }
+
+    .rates-box {
+        grid-template-columns: repeat(1, 220px);
+    }
+
+    .ep-item {
+        padding: 8px;
+    }
+
+    .article-title {
+        line-height: normal;
+    }
+
+    .article-box {
+        flex-direction: column;
+    }
+
+    .block-1 {
+        display: none;
+    }
+
+    .block-4 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .rates-info {
+        gap: 10px;
+    }
+    .rates-info a{
+        font-size: 12px;
+    }
+}
