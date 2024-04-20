@@ -640,10 +640,14 @@ nav ul li:hover {
     }
 }
 
-@media (max-width:320px) {
+@media (max-width: 480px) {
     .wrapper {
         overflow: hidden;
     }
+}
+
+@media (max-width:320px) {
+
     .title {
         font-size: 70px;
         line-height: normal;
@@ -687,10 +691,12 @@ nav ul li:hover {
         align-items: center;
         justify-content: center;
     }
+
     .rates-info {
         gap: 10px;
     }
-    .rates-info a{
+
+    .rates-info a {
         font-size: 12px;
     }
 }
