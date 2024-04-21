@@ -644,9 +644,6 @@ nav ul li:hover {
     .wrapper {
         overflow: hidden;
     }
-}
-
-@media (max-width:320px) {
 
     .title {
         font-size: 70px;
