@@ -23,7 +23,6 @@ function createCards(data) {
         const li = document.createElement('li');
         li.classList.add('episodes__list');
         li.insertAdjacentHTML('beforeend', createCard(episod));
-        console.log(li)
         return li
     })
 }

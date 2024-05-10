@@ -20,7 +20,6 @@ function createCards(data) {
         const li = document.createElement('li');
         li.classList.add('article__list');
         li.insertAdjacentHTML('beforeend', createCard(article));
-        console.log(li)
         return li
     })
 }

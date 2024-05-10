@@ -6,5 +6,4 @@ export const swiper = new Swiper('.testimonials__slider', {
     },
     
     spaceBetween: 20,
-
 });

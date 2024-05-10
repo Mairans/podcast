@@ -3,6 +3,7 @@ import { swiper } from '../helpers/slider.js'
 import { renderCards } from '../helpers/episodes.js'
 import { data, dataArticle } from '../helpers/data.js'
 import { renderArticle } from '../helpers/articleCards.js'
+import {btnBurger} from '../helpers/burger.js'
 
 function onEntry(entry) {
     entry.forEach(change => {
@@ -23,6 +24,8 @@ const elements = document.querySelectorAll('.animation__el');
 for (const el of elements) {
         observer.observe(el);
 }
+
+btnBurger();
 
 renderArticle(dataArticle);
 renderCards(data);

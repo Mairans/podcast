@@ -1,6 +1,7 @@
 .header {
     padding-top: 24px;
     padding-bottom: 64px;
+    overflow: hidden;
 }
 
 .header__container {
@@ -17,6 +18,52 @@
 
 .header__menu ul li:not(:last-child) {
     margin-right: 60px;
+}
+
+.header__burger {
+    display: none;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: #CD4631;
+    border-radius: 50%;
+    position: relative;
+}
+
+.header__burger span {
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: #000;
+    left: 5px;
+    transition: transform .5s, opacity .5s, background-color .5s;
+}
+
+.header__burger span:nth-child(1) {
+    transform: translate(5px, -10px);
+    width: 20px;
+}
+
+.header__burger span:nth-child(2) {
+
+    opacity: 1;
+}
+
+.header__burger span:nth-child(3) {
+    transform: translate(5px, 10px);
+    width: 20px;
+}
+
+.header.open .header__container .header__burger span:nth-child(1) {
+    transform: translate(5px,0) rotate(135deg);
+}
+
+.header.open .header__container .header__burger span:nth-child(2) {
+    opacity: 0;
+}
+
+.header.open .header__container .header__burger span:nth-child(3) {
+    transform: translate(5px,0) rotate(45deg);
 }
 
 .header__btns {
@@ -45,6 +92,49 @@
 .header__menu ul li {
     transition: all .3s;
 }
+
 .header__menu ul li:hover {
     color: #CD4631;
+}
+
+
+@media (max-width:900px) {
+    .header__btns {
+        display: none;
+    }
+
+    .header__burger {
+        display: block;
+    }
+
+    .header__menu {
+        position: absolute;
+        right: -150px;
+        top: 0;
+        background-color: #000;
+        width: 150px;
+        transition: transform .5s, right .5s;
+    }
+
+    .header__menu ul {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: start;
+        padding: 100px 20px 20px 20px;
+    }
+
+    .header__menu ul li:not(:last-child) {
+        margin: 0;
+    }
+
+    .header__menu ul li a {
+        color: #fff;
+        font-size: 20px;
+        display: block;
+        padding: 10px 0;
+    }
+
+    .header.open .header__container .header__menu {
+        right: 0;
+    }
 }
