@@ -16,7 +16,8 @@ function onEntry(entry) {
 }
 
 let options = {
-    threshold: [0.5]
+    rootMargin: "0px",
+    threshold: .25,
 };
 let observer = new IntersectionObserver(onEntry, options);
 const elements = document.querySelectorAll('.animation__el');
