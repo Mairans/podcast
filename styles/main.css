@@ -597,8 +597,6 @@
     }
 
     .episodes__lists {
-        transform: translateX(0);
-        opacity: 1;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 
