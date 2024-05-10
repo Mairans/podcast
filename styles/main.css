@@ -5,6 +5,11 @@
     transform: translateY(0);
 }
 
+.animation__el.element__show .episodes__lists{
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* =============================Hero ======================= */
 .hero {
     padding-bottom: 60px;
@@ -405,7 +410,8 @@
     padding: 60px 40px 30px;
     height: 357px;
     transition: all .3s;
-    transform: rotateY(-90deg)
+    transform: rotateY(-90deg);
+    width: 100%;
 }
 
 .price__first .h2__title,
@@ -553,6 +559,11 @@
         max-width: 450px;
     }
 
+    .heading {
+        font-size: 70px;
+        line-height: 65px;
+    }
+
     .h1__title {
         font-size: 40px;
         line-height: 50.16px;
@@ -577,22 +588,36 @@
         max-width: 38%;
     }
 
+    .testimonials__slider {
+        max-width: 300px;
+    }
+
     .features__lists {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-
     }
-    
+
     .episodes__lists {
-        grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
+        transform: translateX(0);
+        opacity: 1;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 
     .episodes__list {
         flex-direction: column;
+        max-width: 300px;
     }
-    
-    .episodes__list img{
+
+    .episodes__list img {
         align-self: flex-start;
         flex-direction: column;
+    }
+
+    .price__lists {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .price__box {
+        gap: 20px;
     }
 
     .banner__title {
@@ -600,7 +625,12 @@
     }
 
     .platform ul img {
-        width: 75%;
+        width: 50px;
+    }
+
+    .banner__container {
+        padding-top: 5px;
+        padding-bottom: 5px;
     }
 
     .about__idea {

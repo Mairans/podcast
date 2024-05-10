@@ -1,7 +1,12 @@
+.wrapper {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
 .header {
     padding-top: 24px;
     padding-bottom: 64px;
-    overflow: hidden;
 }
 
 .header__container {
@@ -45,7 +50,6 @@
 }
 
 .header__burger span:nth-child(2) {
-
     opacity: 1;
 }
 
@@ -107,7 +111,7 @@
         display: block;
     }
 
-    .header__menu {
+    .header__menu { 
         position: absolute;
         right: -150px;
         top: 0;
@@ -135,6 +139,6 @@
     }
 
     .header.open .header__container .header__menu {
-        right: 0;
+        transform: translate(-100%);
     }
 }
